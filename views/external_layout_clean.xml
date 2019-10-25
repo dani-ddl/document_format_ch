@@ -35,10 +35,6 @@
                                 <div t-if="company.country_id" style= "display:inline" > <span t-field="company.country_id" /> </div>
                               </li>
 
-                              <li t-if="company.email" style="display:block;clear:both;text-align:left;" >
-                                  <span t-field="company.email" />
-                              </li>
-
                           </ul>
                       </div>
                        <div style="width:50%; display:block; float:left">
@@ -58,6 +54,10 @@
                               </li>
                           </ul>
                       </div>
+
+                          <div t-if="company.email" style="clear:both;text-align:left;width:100%;">
+                           <span t-field="company.email" />
+                       </div>
 
                     </div>
 

@@ -19,6 +19,7 @@
     'data': [
         'views/report_saleorder_document.xml',
         'views/external_layout_clean.xml',
+        'views/report_invoice_document.xml',
     ],
     'demo': [],
     'installable': True,

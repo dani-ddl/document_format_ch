@@ -10,7 +10,7 @@
 
             </xpath>
 
-               <xpath expr="/t/t/t/p" position="replace">
+            <xpath expr="/t/t/t/p" position="replace">
 
                 <div></div>
 
@@ -30,7 +30,7 @@
 
            <xpath expr="//div[@class='page']" position="replace">
 
-               <div style="width:50%; float:left;">
+               <div style="width:50%; float:left;margin-top:30px;">
                     <ul class="list-unstyled">
                         <t t-if="not (env.context.get('proforma', False) or is_pro_forma)">
                             <li t-if="doc.state not in ['draft','sent']"><b>Presupuesto:  </b> <span t-field="doc.name"/></li>
@@ -64,7 +64,7 @@
                     </ul>
                 </div>
 
-           <div style="width:50%;  float:left;">
+           <div style="width:50%;  float:left;margin-top:30px;">
             <ul class="list-unstyled">
 
               <li t-if="doc.partner_id.commercial_name">
