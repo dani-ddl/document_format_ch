@@ -13,8 +13,8 @@
                     </div>
                     <div style= "width:60%; display:block;float:left;" >
                       <strong><div t-if="company.name"><span style="color:black; margin-bottom:0px" t-field="company.name"/></div></strong>
-                      <hr style="heigth:5px; color:grey; margin: 3px" ></hr>
-                      <div class="col-5 offset-1" name="company_address" style= "color:gray; display:inline; width:50%">
+                      <hr style="heigth:5px; color:black; margin: 3px" ></hr>
+                      <div class="col-5 offset-1" name="company_address" style= "color:black; display:inline; width:50%">
                           <div style="width:50%; display:block; float:left">
                             <span> <strong> Dirección </strong> </span>
                           <ul class="list-unstyled">
