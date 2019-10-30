@@ -141,9 +141,11 @@
                 </div>
 
               </div>
+
               <!-- Fin cabecera -->
 
               <!-- Lineas -->
+
               <t t-set="current_subtotal" t-value="0"/>
                     <t t-foreach="doc.order_line" t-as="line">
                         <t t-set="current_subtotal" t-value="current_subtotal + line.price_subtotal" groups="account.group_show_line_subtotals_tax_excluded"/>
@@ -151,10 +153,12 @@
               <div style="clear:both;font-size:0.9em;">
 
                 <!-- Código -->
+
                 <div class="text-left" style="width:13%;float:left;">
                 <span t-field="line.product_id.default_code"/>
                 </div>
-                <!-- Fin codigo -->
+
+                  <!-- Fin codigo -->
 
                 <!-- descripción -->
 
@@ -218,7 +222,9 @@
               <!-- Fin separador -->
 
             </div>
+
             <!-- Totales -->
+
             <div style="width:30%;float:right;clear:both">
 
 
@@ -271,6 +277,7 @@
               </div>
 
               <!-- FIn total -->
+
                  <div style="height:2px;background-color:black;clear:both;"></div>
               </div>
 
