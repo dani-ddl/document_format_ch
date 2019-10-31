@@ -152,6 +152,19 @@
                         <t t-set="current_subtotal" t-value="current_subtotal + line.price_total" groups="account.group_show_line_subtotals_tax_included"/>
               <div style="clear:both;font-size:0.9em;">
 
+                    <!--Si es nota -->
+
+                    <t t-if="not line.product_id">
+
+                        <div class="text-left" style="width:100%;">
+                            <b><span t-field="line.name"/></b>
+                        </div>
+                    </t>
+
+
+              <!-- Fin si es nota -->
+                  <!-- Si no es nota -->
+                    <t t-if="line.product_id">
                 <!-- Código -->
 
                 <div class="text-left" style="width:13%;float:left;">
@@ -209,9 +222,16 @@
 
                 <!-- Fin IVA -->
 
+                <!-- Fin si no es nota -->
+
+                  </t>
+
               </div>
 
               </t>
+
+
+
 
               <!-- Fin lineas -->
 
