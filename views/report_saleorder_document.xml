@@ -37,7 +37,7 @@
                             <li t-if="doc.state in ['draft','sent']"><b>Pedido: </b> <span t-field="doc.name"/></li>
                         </t>
 
-                        <li t-if="env.context.get('proforma', False) or is_pro_forma"><b>Orden de compra cancelada: </b><span t-field="doc.name"/></li>
+                        <li t-if="env.context.get('proforma', False) or is_pro_forma"><b>Factura Pro-Forma: </b><span t-field="doc.name"/></li>
 
                         <li t-if="doc.confirmation_date and doc.state not in ['draft','sent']">
                             <b>Fecha:</b><span t-esc="doc.confirmation_date.strftime('%d/%m/%Y')" />
@@ -176,7 +176,9 @@
                 <!-- descripción -->
 
                 <div class="text-left" style="float:left;width:41%;">
-                  <span t-field="line.name"/>
+                    <t t-set="descripcion" t-value="line.name.find(']') +1"></t>
+                    <t t-set="linea" t-value="line.name[descripcion:]"></t>
+                    <span t-esc="linea"/>
                 </div>
 
                 <!-- Fin descripción -->

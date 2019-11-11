@@ -333,6 +333,7 @@
                               <img style="width:100%;" t-attf-src="data:image/*;base64,{{o.digital_signature}}"/>
                         </div>
 
+
                         <!-- fin Firmar del cliente -->
 
                         <p>

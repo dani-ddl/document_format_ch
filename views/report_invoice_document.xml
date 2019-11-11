@@ -30,7 +30,7 @@
                             <span t-field="o.number"/>
                         </li>
                         <li t-if="o.type == 'out_refund'">
-                            <b>Factura rectificativa</b>
+                            <b>Factura Rectificativa</b>
                             <span t-field="o.number"/>
                         </li>
                         <li t-if="o.type == 'in_refund'">
@@ -161,7 +161,9 @@
                                 <!-- descripción -->
 
                                 <div class="text-left" style="float:left;width:41%;">
-                                    <span t-field="line.name"/>
+                                    <t t-set="descripcion" t-value="line.name.find(']') +1"></t>
+                                    <t t-set="linea" t-value="line.name[descripcion:]"></t>
+                                    <span t-esc="linea"/>
                                 </div>
 
                                 <!-- Fin descripción -->
