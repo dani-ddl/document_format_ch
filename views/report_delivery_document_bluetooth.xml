@@ -61,48 +61,48 @@
                         <!-- Cabecera documento -->
 
                         <div style="display:block; width:80%; margin:25px auto;">
-                            <img t-if="env.ref('base.main_company').logo"
-                                 t-att-src="image_data_uri(env.ref('base.main_company').logo)" alt="Logo"
+                            <img t-if="res_company.logo"
+                                 t-att-src="image_data_uri(res_company.logo)" alt="Logo"
                                  style="width:100%"/>
                         </div>
 
                         <div style="font-size:1em;font-weight:bolder;text-align:center;">
 
                             <div>
-                                <span t-if="env.ref('base.main_company').name"
-                                      t-field="env.ref('base.main_company').name"/>
+                                <span t-if="res_company.name"
+                                      t-field="res_company.name"/>
                             </div>
 
                             <div>
-                                C/<span t-if="env.ref('base.main_company').street"
-                                        t-field="env.ref('base.main_company').street"/>.
-                                <span t-if="env.ref('base.main_company').zip"
-                                      t-field="env.ref('base.main_company').zip"/>
-                                <span t-if="env.ref('base.main_company').city"
-                                      t-field="env.ref('base.main_company').city"/>
+                                C/<span t-if="res_company.street"
+                                        t-field="res_company.street"/>.
+                                <span t-if="res_company.zip"
+                                      t-field="res_company.zip"/>
+                                <span t-if="res_company.city"
+                                      t-field="res_company.city"/>
                             </div>
 
                             <div>
-                                <!--<span t-if="env.ref('base.main_company').zip" t-field="env.ref('base.main_company').zip"/> <span t-if="env.ref('base.main_company').city" t-field="env.ref('base.main_company').city"/>
-                                (<span t-if="env.ref('base.main_company').state_id.name" t-field="env.ref('base.main_company').state_id.name"/>)-->
+                                <!--<span t-if="res_company.zip" t-field="res_company.zip"/> <span t-if="res_company.city" t-field="res_company.city"/>
+                                (<span t-if="res_company.state_id.name" t-field="res_company.state_id.name"/>)-->
                             </div>
 
                             <div>
 
-                                <div t-if="env.ref('base.main_company').phone" style="width:50%;float:left;">
+                                <div t-if="res_company.phone" style="width:50%;float:left;">
 
                                     <div style="text-align:right;margin-right:5px;">
                                         <span>TLF.:</span>
-                                        <span t-field="env.ref('base.main_company').phone"/>
+                                        <span t-field="res_company.phone"/>
                                     </div>
 
                                 </div>
 
-                                <div t-if="env.ref('base.main_company').vat" style="width:50%;float:left;">
+                                <div t-if="res_company.vat" style="width:50%;float:left;">
 
                                     <div style="text-align:left;margin-left:5px;">
                                         <span>N.I.F.:</span>
-                                        <span t-field="env.ref('base.main_company').vat"/>
+                                        <span t-field="res_company.vat"/>
                                     </div>
 
                                 </div>
