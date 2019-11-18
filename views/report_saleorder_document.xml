@@ -2,6 +2,24 @@
 <odoo>
     <data>
 
+        <record id="A4_presupuesto" model="report.paperformat">
+            <field name="name">A4 Presupuesto</field>
+            <field name="default" eval="True"/>
+            <field name="format">A4</field>
+            <field name="margin_top">55</field>
+            <field name="margin_bottom">28</field>
+            <field name="margin_right">7</field>
+            <field name="margin_left">7</field>
+            <field name="orientation">Portrait</field>
+            <field name="header_spacing">50</field>
+            <field name="dpi">95</field>
+            <!--<field name="report_ids">sale.order</field>-->
+        </record>
+
+        <record id="sale.action_report_saleorder" model="ir.actions.report">
+            <field name="paperformat_id" ref="document_format_ch.A4_presupuesto" />
+        </record>
+
         <template id="report_saleorder_document_ch" inherit_id="sale.report_saleorder_document">
 
             <xpath expr="//div[@t-field='doc.partner_id']" position="replace">
@@ -30,11 +48,11 @@
 
            <xpath expr="//div[@class='page']" position="replace">
 
-               <div style="width:50%; float:left;margin-top:30px;">
+               <div style="width:50%; float:left;">
                     <ul class="list-unstyled">
                         <t t-if="not (env.context.get('proforma', False) or is_pro_forma)">
-                            <li t-if="doc.state not in ['draft','sent']"><b>Presupuesto:  </b> <span t-field="doc.name"/></li>
-                            <li t-if="doc.state in ['draft','sent']"><b>Pedido: </b> <span t-field="doc.name"/></li>
+                            <li t-if="doc.state in ['draft','sent']"><b>Presupuesto:  </b> <span t-field="doc.name"/></li>
+                            <li t-if="doc.state not in ['draft','sent']"><b>Pedido: </b> <span t-field="doc.name"/></li>
                         </t>
 
                         <li t-if="env.context.get('proforma', False) or is_pro_forma"><b>Factura Pro-Forma: </b><span t-field="doc.name"/></li>
@@ -64,7 +82,7 @@
                     </ul>
                 </div>
 
-           <div style="width:50%;  float:left;margin-top:30px;">
+           <div style="width:50%;  float:left;">
             <ul class="list-unstyled">
 
               <li t-if="doc.partner_id.commercial_name">
