@@ -225,6 +225,14 @@
 
                 <!-- Fin descuento -->
 
+                <!-- Descuento 2 -->
+
+                <div class="text-right" groups="sale.group_discount_per_so_line" style="float:left;width:10%;">
+                  <span t-field="line.discount2"/>
+                </div>
+
+                <!-- Fin descuento 2 -->
+
                 <!--  Valor Neto -->
 
                 <div class="text-right" style="float:left;width:12%;">
