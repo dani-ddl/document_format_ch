@@ -135,7 +135,7 @@
                   <span>Código</span>
                 </div>
 
-                <div class="text-left" style="font-weight:bolder; color:#4f4b4b;float:left;width:41%;">
+                <div class="text-left" style="font-weight:bolder; color:#4f4b4b;float:left;width:31%;">
                   <span>Descripción</span>
                 </div>
 
@@ -197,7 +197,7 @@
 
                 <!-- descripción -->
 
-                <div class="text-left" style="float:left;width:41%;">
+                <div class="text-left" style="float:left;width:31%;">
                     <t t-set="descripcion" t-value="line.name.find(']') +1"></t>
                     <t t-set="linea" t-value="line.name[descripcion:]"></t>
                     <span t-esc="linea"/>
