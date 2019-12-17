@@ -297,7 +297,7 @@
                                         <t t-set="importeIva21"
                                            t-value="importeIva21 +((ml.move_id.sale_line_id.price_unit*ml.qty_done)*0.21 )"></t>
                                         <t t-set="importeIva21Total"
-                                           t-value="importeIva21Total +(ml.move_id.sale_line_id.price_reduce*ml.move_id.sale_line_id.qty_delivered)"></t>
+                                           t-value="importeIva21Total +(ml.move_id.sale_line_id.price_unit*ml.qty_done)"></t>
                                     </t>
 
                                     <t t-if="tax.amount == 10.0">
