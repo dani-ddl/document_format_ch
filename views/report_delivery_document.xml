@@ -271,12 +271,12 @@
                             <!-- total linea -->
 
                             <div class="text-right" style="float:left;width:10%;">
-                                <span t-esc="'%.2f'%(ml.move_id.sale_line_id.price_reduce*ml.move_id.sale_line_id.qty_delivered)"/>
+                                <span t-esc="'%.2f'%(ml.move_id.sale_line_id.price_unit*ml.qty_done)"/>
                                 €
                             </div>
 
                             <t t-set="importeTotal"
-                               t-value="importeTotal + (ml.move_id.sale_line_id.price_reduce*ml.move_id.sale_line_id.qty_delivered)"></t>
+                               t-value="importeTotal + (ml.move_id.sale_line_id.price_unit*ml.qty_done)"></t>
 
                             <!-- fin total linea -->
 
@@ -295,23 +295,23 @@
 
                                     <t t-if="tax.amount == 21.0">
                                         <t t-set="importeIva21"
-                                           t-value="importeIva21 +((ml.move_id.sale_line_id.price_reduce*ml.move_id.sale_line_id.qty_delivered)*0.21 )"></t>
+                                           t-value="importeIva21 +((ml.move_id.sale_line_id.price_unit*ml.qty_done)*0.21 )"></t>
                                         <t t-set="importeIva21Total"
                                            t-value="importeIva21Total +(ml.move_id.sale_line_id.price_reduce*ml.move_id.sale_line_id.qty_delivered)"></t>
                                     </t>
 
                                     <t t-if="tax.amount == 10.0">
                                         <t t-set="importeIva10"
-                                           t-value="importeIva10 +((ml.move_id.sale_line_id.price_reduce*ml.move_id.sale_line_id.qty_delivered)*0.10 )"></t>
+                                           t-value="importeIva10 +((ml.move_id.sale_line_id.price_unit*ml.qty_done)*0.10 )"></t>
                                         <t t-set="importeIva10Total"
-                                           t-value="importeIva10Total +(ml.move_id.sale_line_id.price_reduce*ml.move_id.sale_line_id.qty_delivered)"></t>
+                                           t-value="importeIva10Total +(ml.move_id.sale_line_id.price_unit*ml.qty_done)"></t>
                                     </t>
 
                                     <t t-if="tax.amount == 4.0">
                                         <t t-set="importeIva4"
-                                           t-value="importeIva4 +((ml.move_id.sale_line_id.price_reduce*ml.move_id.sale_line_id.qty_delivered)*0.04 )"></t>
+                                           t-value="importeIva4 +((ml.move_id.sale_line_id.price_unit*ml.qty_done)*0.04 )"></t>
                                         <t t-set="importeIva4Total"
-                                           t-value="importeIva4Total +(ml.move_id.sale_line_id.price_reduce*ml.move_id.sale_line_id.qty_delivered)"></t>
+                                           t-value="importeIva4Total +(ml.move_id.sale_line_id.price_unit*ml.qty_done)"></t>
                                     </t>
 
 
