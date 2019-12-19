@@ -320,7 +320,7 @@
                                     <t t-set="importeTotal"
                                     t-value="importeTotal + total_linea"></t>
                                 </t>
-                                 <span>TOTALLINEA</span><span t-esc="total_linea"/>
+
                             </t>
 
                             <t t-if="ml.move_id.purchase_line_id">
