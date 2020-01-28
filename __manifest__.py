@@ -21,6 +21,7 @@
         'views/report_saleorder_document.xml',
         'views/external_layout_clean.xml',
         'views/report_invoice_document.xml',
+        'views/report_invoice_document_2_discounts.xml',
         'views/report_delivery_document.xml',
         'views/report_saleorder_bluetooth.xml',
         'views/report_invoice_bluetooth.xml',
